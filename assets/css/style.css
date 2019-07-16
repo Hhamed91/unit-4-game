@@ -10,7 +10,7 @@ align-items: center;
     width: 200px;
     border-radius: 4px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 1s;
+    transition: box-shadow 2s;
 }
 
 .cyrstal:hover{
