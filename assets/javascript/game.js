@@ -11,17 +11,17 @@ var resetAndStart = function(){
     $(".meh").empty();
 
     var images = [
-        "http://www.sclance.com/pngs/crystal-png/crystal_png_351264.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQxxgib1z9MEAuRjyFVH87jnqWi6yFSpFz5mADdTawJ6AFL_l_LQ",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBnrSHbUQcOHHEmVAqEjqiD9HST85GJF66MbwIFTzD2F5xPYYC",
-        "https://data.whicdn.com/images/304180824/superthumb.png?t=1514540697",
-        "https://data.whicdn.com/images/280966858/superthumb.png?t=1489220536",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNvLUnOAZV50bF-gAP9akPQqSc6mi-g-Uf8vjGjlfVMMLe3WyhAA",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSL3065gKZ-KC-linVRN6sJrMxoOzoFcIqS15lzU9zIo8H66gm",
     ];
 
     //Adding the computer choice, then giving it a random number
 randomResult = Math.floor(Math.random()* 101) + 19;
 // console.log(randomResult)
 
-$("#computer").html("Random Result: " + randomResult);
+$("#computer").html("Random Number: " + randomResult);
 
 
 //Create a loop to generate 4 divs for each crystal
@@ -38,20 +38,20 @@ for(var i=0; i<4; i++){
         "class": "cyrstal",
         "data-random": randomNum
 
-    });
+        });
 
+        //Connecting images with each URL
         crystal.css({
             "background-image":"url('" + images[i] + "')",
             "background-size":"cover"
 
         });
 
-
-    crystal.html(randomNum)
+        // It can be used to show each number assigned to each crystal
+        crystal.html(randomNum)
    
-
-    $(".meh").append(crystal);
-    }
+        $(".meh").append(crystal);
+        }
     
     $("#currentNum").html("You total score is: " + pervious);
 
@@ -64,26 +64,29 @@ for(var i=0; i<4; i++){
 // When page loads, the click button generates a new class for each crystal after they get cleared out
 
 $(document).on("click", ".cyrstal", function(){
+
+    //Pasing the random number to an integer
     var cyrstalNum= parseInt($(this).attr("data-random"));
 
     pervious += cyrstalNum;
 
-    $("#currentNum").html("You total score is: " + pervious);
+    $("#currentNum").html("Your total: " + pervious);
 
+    // To see that we can get the total number
     console.log(pervious);
 
 
     if(pervious > randomResult){
 
         lost++;
-        $("#lost").html(lost);
+        $("#lost").html("Total number of losses:" + lost);
         pervious = 0;
         resetAndStart();
 
     }else if(pervious === randomResult){
 
         win++;
-        $("#win").html("Total number of wins " + win);
+        $("#win").html("Total number of wins:" + win);
         pervious = 0;
         resetAndStart();
 
