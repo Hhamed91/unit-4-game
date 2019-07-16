@@ -1,0 +1,21 @@
+.meh{
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.cyrstal{
+    border: 1px solid green;
+    height: 200px;
+    width: 200px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 1s;
+}
+
+.cyrstal:hover{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 2px;
+
+}
