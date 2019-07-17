@@ -17,14 +17,15 @@ var resetAndStart = function(){
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSL3065gKZ-KC-linVRN6sJrMxoOzoFcIqS15lzU9zIo8H66gm",
     ];
 
-    //Adding the computer choice, then giving it a random number
+    //Adding the computer choice, then giving it a random number between 19-120
 randomResult = Math.floor(Math.random()* 101) + 19;
-// console.log(randomResult)
+
+    // console.log(randomResult)
 
 $("#computer").html("Random Number: " + randomResult);
 
 
-//Create a loop to generate 4 divs for each crystal
+    //Create a loop to generate 4 divs for each crystal
 for(var i=0; i<4; i++){
 
     //Each crystal should have a random hidden value between 1 - 12
@@ -47,25 +48,26 @@ for(var i=0; i<4; i++){
 
         });
 
-        // It can be used to show each number assigned to each crystal
-        crystal.html(randomNum)
+        // It can be used to show each number assigned to each crystal for cheating purposes
+        // crystal.html(randomNum)
    
+        //Creating each div with the image attr
         $(".meh").append(crystal);
         }
     
-    $("#currentNum").html("You total score is: " + pervious);
+    $("#currentNum").html("Your total: " + pervious);
 
 }
-    // calling out the fucnstion to reset and start the game
+        // calling out the fucnstion to reset and start the game
     resetAndStart();
 
 
 
-// When page loads, the click button generates a new class for each crystal after they get cleared out
+        // When the page loads, the click button generates a new class for each crystal after they get cleared out
 
 $(document).on("click", ".cyrstal", function(){
 
-    //Pasing the random number to an integer
+    //Parsing the random number to an integer
     var cyrstalNum= parseInt($(this).attr("data-random"));
 
     pervious += cyrstalNum;
@@ -73,13 +75,14 @@ $(document).on("click", ".cyrstal", function(){
     $("#currentNum").html("Your total: " + pervious);
 
     // To see that we can get the total number
-    console.log(pervious);
+    // console.log(pervious);
 
-
+    // if condition to check if we won or lost
     if(pervious > randomResult){
 
         lost++;
-        $("#lost").html("Total number of losses:" + lost);
+        $("#lost").html("Total number of losses: " + lost);
+        alert("Opps! you lost ");
         pervious = 0;
         resetAndStart();
 
@@ -87,6 +90,7 @@ $(document).on("click", ".cyrstal", function(){
 
         win++;
         $("#win").html("Total number of wins:" + win);
+        alert("Yaaas!! You got the total number!");
         pervious = 0;
         resetAndStart();
 
