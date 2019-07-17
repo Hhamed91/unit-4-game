@@ -1,26 +1,36 @@
+/* #body{
+    background-image:url(../unit-4-game/assets/images/background.jpg);
+    display: block;
+    margin: 8px;
+} */
+
+#para{
+    color:black;
+    background-color:beige;
+    width:400px;
+    padding:15px;
+    margin-right:20px;
+    padding-bottom:10px;
+    float: right;
+}
+
+.alert{
+    width:400px;
+    padding:15px;
+    margin:0px;
+    padding-bottom:10px;
+    
+}
+
+
 .meh{
 
-justify-content: space-around;
-align-items: center;
-margin: 20px;
-
-}
-
-#currentNum{
+    justify-content: space-around;
+    align-items: stretch;
     margin: 20px;
+    margin-left:2px;
 
 }
-
-#win{
-    margin: 20px;
-
-}
-
-#lost {
-    margin: 20px;
-
-}
-
 .cyrstal{
     border: 1px solid green;
     height: 75px;
@@ -28,31 +38,53 @@ margin: 20px;
     border-radius: 4px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     transition: box-shadow 2s;
-    margin: 20px;
+    float: left;
+    padding: 50px;
+    margin-bottom: 10px;
     
 }
 
 .cyrstal:hover{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    padding: 2px;
 
 }
 
-#body{
-    background-color:lightgray
+#currentNum{
+    width:400px;
+    padding:15px;
+    margin:0px;
+    padding-bottom:10px;
+    
+}
+
+#win{
+    width:400px;
+    padding:15px;
+    margin:0px;
+    padding-bottom:10px;
+    background-color:beige;
 
 }
+
+#lost {
+    width:400px;
+    padding:15px;
+    margin:0px;
+    padding-bottom:10px;
+    background-color:beige;
+
+}
+
+
 
 .bg{
     font-family: 'Courier New', Courier, monospace
 }
 
-#computer{
-   
+/* #computer{
     margin: 20px;
-
-}
+} */
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     body {
