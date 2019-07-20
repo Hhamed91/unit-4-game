@@ -5,8 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystals Collector Game</title>
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="unit-4-game/assets/css/style.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+
 </head>
-<body>
+<body id="body">
+    <div class="bg">
+    <div>
+        <h1 class="text-center">Crystals Collector Game</h1>
+    </div>
+    <br>
+
+
+<div id="full">
+    <div id="para">
+            <p>
+                   1- You will be given a random number at the start of the game.
+                    </p>
+                    <p>
+                   2- There are four crystals below. By clicking on the crystals 
+                    you will add a specific amount of points to your score.
+                </p>
+                <p>
+                    3- You will win the game by matching your total score to a random
+                    number, you lose the game if your total score goes above
+                    the random number.
+                    </p>
+                <p>
+                   4- The value of each crystal is hidden from you until you click on it.
+                </p>
+                <p>
+                   5- Each time when the game starts, the game will change the values of each crystal.
+                </p>
+
+    </div>
+
     
+
+    <div class="alert alert-warning">
+            <p id="computer"></p>
+  
+    </div>
+    
+    <div class= "meh"></div>
+        <br>
+
+    <p id="currentNum"></p>
+    <p id="win">Total number of wins: </p>
+    <p id="lost"> Total number of losses: </p>
+
+</div>
+
+</div>
+    <script src="unit-4-game/assets/javascript/game.js"></script>
+
 </body>
 </html>

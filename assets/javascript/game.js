@@ -11,11 +11,14 @@ var resetAndStart = function(){
     $(".meh").empty();
 
     var images = [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQxxgib1z9MEAuRjyFVH87jnqWi6yFSpFz5mADdTawJ6AFL_l_LQ",
+        "./assets/images/blue.jpg",
+        //"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQxxgib1z9MEAuRjyFVH87jnqWi6yFSpFz5mADdTawJ6AFL_l_LQ",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBnrSHbUQcOHHEmVAqEjqiD9HST85GJF66MbwIFTzD2F5xPYYC",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNvLUnOAZV50bF-gAP9akPQqSc6mi-g-Uf8vjGjlfVMMLe3WyhAA",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSL3065gKZ-KC-linVRN6sJrMxoOzoFcIqS15lzU9zIo8H66gm",
     ];
+
+
 
     //Adding the computer choice, then giving it a random number between 19-120
 randomResult = Math.floor(Math.random()* 101) + 19;
